@@ -1,0 +1,57 @@
+.tabs {
+  list-style-type: none;
+  padding:0;
+  margin:0;
+  position:relative;
+
+}
+
+.tabs {
+  display: flex;
+
+}
+
+.tabs li {
+  float:left;
+}
+.tabs li > input {
+  display:none;
+}
+
+.tabs li > label {
+  display:inline-block;
+  border: 3px solid #d9d9d9;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  height: 30px;
+  line-height: 30px;
+  padding: 5px 20px;
+  cursor:pointer;
+}
+
+.tabs li:last-child > label {
+  border-right-width: 1px;
+}
+
+.tabs .tab-content {
+  display:none;
+  position:absolute;
+  left:0;
+  padding:20px;
+
+  height:400px;
+  overflow-y: scroll;
+}
+
+.tabs li>label {
+  color: #404040;
+  font-weight:bold;
+}
+
+.tabs li > input:checked + label {
+  background-color: #ff3300;
+}
+
+.tabs li > input:checked ~ .tab-content {
+  display: block;
+}
